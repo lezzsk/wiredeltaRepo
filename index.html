@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">My day</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="lightGrey" onload="actualTime();">
+<div class="mainDiv">
+    <div class="headerDiv">
+        <div class="inputFieldDiv">
+            <input type="text" id="inputTitle">
+            <button class="" onclick="titleChange();">Change Title</button>
+        </div>
+        <div class="dropdown">
+            <button class="dropdownColors">Change Background</button>
+            <div class="dropdownButtons">
+                <button class="buttonsStyle" onclick="lightGrey();">Default</button>
+                <button class="buttonsStyle" onclick="darkGrey();">DarkGrey</button>
+                <button class="buttonsStyle" onclick="black();">Black</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="leftDiv">
+        <div class="leftDivInner">
+            <p id="today"></p>
+            <p id="time"></p>
+            <p id="date"></p>
+        </div>
+
+    </div>
+    <div class="rightDiv">
+        <div class="rightDivInner">
+            <table id="tasks">
+            </table>
+        </div>
+    </div>
+    <div class="animationButtonDiv">
+        <button class="animationButton" onclick="animation();">Show Tomorrow's Tasks</button>
+    </div>
+    <div class="leftDivBottom" id="leftDivBottom">
+        <div class="leftDivInner">
+            <p id="tomorrow">Tomorrow</p>
+        </div>
+    </div>
+    <div class="rightDivBottom" id="rightDivBottom">
+        <div class="rightDivInner">
+            <table id="tomorrowsTasks">
+            </table>
+        </div>
+    </div>
+
+</div>
+<script src="js/script.js"></script>
+</body>
+
+</html>

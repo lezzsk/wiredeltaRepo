@@ -1,0 +1,258 @@
+/*---------------------------- Import fonts ---------*/
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+body {
+    font-family: 'Montserrat-Regular';
+margin-bottom: 50px;
+}
+button {
+    cursor: pointer;
+}
+#inputTitle {
+    width: 140px;
+    padding: 7px 0px 7px 0px !important;
+}
+.inputFieldDiv {
+    margin-bottom: 15px;
+}
+.inputFieldDiv button, #inputTitle{
+    border: none;
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 7px;
+
+
+}
+.animationButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 7px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+.dropdownColors{
+    border: none;
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 7px;
+    width: 140px;
+}
+.dropdownButtons {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdownButtons button {
+    color: black;
+    padding: 6px;
+    text-decoration: none;
+    display: block;
+}
+.buttonsStyle {
+    border: none;
+    background: white;
+    width: 100%;
+    text-align: left;
+}
+.buttonsStyle:hover{
+
+    text-decoration: none;
+    display: block;
+    background-color: #8dd6d2;
+    color: white;
+}
+.dropdown:hover .dropdownButtons {
+    display: block;
+}
+
+.dropdown:hover .dropdownColors, .inputFieldDiv button:hover, .animationButton:hover {
+    background-color: #8dd6d2;
+    color: white;
+    
+}
+.lightGrey {
+    background-color: lightgrey;
+}
+.darkGrey {
+    background-color: #a0a0a0;
+}
+.black {
+    background-color: #212121;
+}
+/*------------------------------------*/
+.weather {
+    display: block;
+    float: left;
+}
+.mainDiv {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    min-height: 850px;
+
+}
+.headerDiv {
+
+    margin-right: 10px;
+    width: 100%;
+    margin-bottom: 100px;
+    display: block;
+}
+.leftDiv, .rightDiv, .leftDivBottom, .rightDivBottom {
+    display: block;
+    float: left;
+    min-height: 250px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.leftDiv {
+    background-color: #8dd6d2;
+
+}
+.rightDiv {
+    background-color: white;
+    color: #8c8c8c;
+}
+
+.leftDivBottom {
+
+    background-color: #8dd6d2;
+   display: none;
+}
+.rightDivBottom {
+
+    background-color: white;
+    color: #8c8c8c;
+    display: none;
+}
+.tdTime {
+    color: #8dd6d2;
+}
+.leftDivInner, .rightDivInner {
+    margin-left: 25px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+.leftDivInner > p {
+    color: white;
+}
+
+#today, #tomorrow {
+    font-size: 2em;
+    margin: 0;
+}
+#time {
+    font-size: 1.2em;
+}
+
+th, td {
+    padding-left: 0 !important;
+    text-align: left;
+}
+th {
+    padding: 0px 15px 15px 7px;
+    color: black;
+}
+td {
+    padding: 7px;
+}
+/*------------------ Animation -------------*/
+.animationLeft {
+    animation: move1 1.5s linear 1;
+    display: block;
+}
+.animationRight {
+    animation: move2 1.5s linear 1;
+    display: block;
+}
+@keyframes move1 {
+    0% {
+        transform: translate(-300px, 0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-150px, 0px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1 ;
+    }
+}
+@keyframes move2 {
+    0% {
+        transform: translate(300px, 0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(150px, 0px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1 ;
+    }
+}
+/*----------------- Media Queries -------------*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .mainDiv {
+        width: 100%;
+    }
+    .leftDiv, .rightDiv, .leftDivBottom, .rightDivBottom {
+        width: 100%;
+    }
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .mainDiv {
+        width: 100%;
+
+    }
+    .leftDiv, .rightDiv, .leftDivBottom, .rightDivBottom {
+        width: 100%;
+    }
+
+
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .mainDiv {
+        width: 90%;
+
+    }
+    .leftDiv, .rightDiv, .leftDivBottom, .rightDivBottom {
+        width: 50%;
+    }
+
+
+}
+@media (min-width: 1025px)  {
+    .mainDiv {
+        width: 70%;
+
+    }
+    .leftDiv, .rightDiv, .leftDivBottom, .rightDivBottom {
+        width: 50%;
+    }
+
+}
